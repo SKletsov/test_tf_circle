@@ -8,4 +8,4 @@ jobs:
       — checkout
       - run:
           name: TEST
-          command: ls
+          command: "ls"
