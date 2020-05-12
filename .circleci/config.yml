@@ -6,7 +6,7 @@ jobs:
     working_directory: ~/repo
     steps:
       — checkout
-      run:
-       name: test
-       command: |
-         ls 
+      - run:
+          name: test
+          command: ls
+        
