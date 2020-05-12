@@ -5,6 +5,8 @@ jobs:
     steps:
       - checkout
       - run: echo "test"
+      - run: ls
+      - run: git branch 
   test:
     docker:
       - image: cimg/base:stable
