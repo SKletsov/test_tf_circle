@@ -4,7 +4,7 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:| 
+      - run: | 
           echo "Running pipeline" &&
           echo ${CIRCLE_BRANCH} &&
           export TF_VAR_custom_branch=${CIRCLE_BRANCH} &&
