@@ -1,12 +1,19 @@
-version: 2
 jobs:
   build:
     docker:
-      — image: circleci/ubuntu:latest
-    working_directory: ~/repo
+      - image: circleci/ubuntu
     steps:
-      — checkout
-      - run:
-          name: test
-          command: ls
-        
+      - checkout
+      - run: echo "test"
+  test:
+    docker:
+      - image: circleci/ubuntu
+    steps:
+      - checkout
+      - run: echo "test"
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
