@@ -4,9 +4,9 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run: echo "test"
-      - run: ls
-      - run: git branch 
+      - run: echo "Running pipeline"
+      - run: export gitBranch = 'git branch'
+      - run: echo $gitBranch
   test:
     docker:
       - image: cimg/base:stable
