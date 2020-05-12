@@ -7,7 +7,7 @@ jobs:
       - run: echo "Running pipeline"
       - run: git branch
       - run: export gitBranch=$(git branch)
-      - run: echo $gitBranch
+      - run: echo ${CIRCLE_BRANCH}
   test:
     docker:
       - image: cimg/base:stable
