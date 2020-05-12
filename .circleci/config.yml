@@ -5,6 +5,7 @@ jobs:
     steps:
       - checkout
       - run: echo "Running pipeline"
+      - run: git branch
       - run: export gitBranch=$(git branch)
       - run: echo $gitBranch
   test:
