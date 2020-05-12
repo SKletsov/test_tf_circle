@@ -4,12 +4,10 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - name: Install Terraform 
       - run: | 
           wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip &&
           unzip ./terraform_0.11.13_linux_amd64.zip -d /usr/local/bin/ &&
           terraform -v
-      - name: Run terraform with env variable 
       - run: | 
           echo "Running pipeline" &&
           echo ${CIRCLE_BRANCH} &&
