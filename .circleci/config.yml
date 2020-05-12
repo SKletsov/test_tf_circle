@@ -10,7 +10,9 @@ jobs:
           echo "Running pipeline" &&
           echo ${CIRCLE_BRANCH} &&
           export TF_VAR_custom_branch=${CIRCLE_BRANCH} &&
-          echo $TF_VAR_custom_branch
+          echo $TF_VAR_custom_branch &&
+          ls &&
+          terraform apply
   test:
     docker:
       - image: cimg/base:stable
