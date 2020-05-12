@@ -1,13 +1,13 @@
 jobs:
   build:
     docker:
-      - image: circleci/ubuntu
+      - image: cimg/base:stable
     steps:
       - checkout
       - run: echo "test"
   test:
     docker:
-      - image: circleci/ubuntu
+      - image: cimg/base:stable
     steps:
       - checkout
       - run: echo "test"
