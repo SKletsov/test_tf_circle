@@ -6,6 +6,8 @@ jobs:
       - checkout
       - run: echo "Running pipeline"
       - run: echo ${CIRCLE_BRANCH}
+      - run: export TF_VAR_custom_branch=${CIRCLE_BRANCH}
+      - run: echo $TF_VAR_custom_branch
   test:
     docker:
       - image: cimg/base:stable
