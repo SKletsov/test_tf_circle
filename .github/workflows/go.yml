@@ -35,3 +35,10 @@ jobs:
 
     - name: Test
       run: go test -v .
+      
+  
+    - name: Upload mod-bbb-web
+      uses: actions/upload-artifact@v2
+      with:
+          name: mod-bbb-web
+          path: ./
